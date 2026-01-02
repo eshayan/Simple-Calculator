@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char op;
+    double num1, num2;
+
+    cout << "Enter operator (+, -, *, /): ";
+    cin >> op;
+
+
+    if (op != '+' && op != '-' && op != '*' && op != '/') {
+        cout << "Error! '" << op << "' is not a valid operator." << endl;
+        return 0; 
+    }
+
+    cout << "Enter number one: ";
+    cin >> num1;
+    
+    cout << "Enter number two: ";
+    cin >> num2; 
+
+    if (op == '+') {
+        cout << num1 << " + " << num2 << " = " << num1 + num2;
+    } 
+    else if (op == '-') {
+        cout << num1 << " - " << num2 << " = " << num1 - num2;
+    } 
+    else if (op == '*') {
+        cout << num1 << " * " << num2 << " = " << num1 * num2;
+    } 
+    else if (op == '/') {
+        if (num2 != 0)
+            cout << num1 << " / " << num2 << " = " << num1 / num2;
+        else
+            cout << "Error! Division by zero.";
+    }
+
+    return 0;
+}
